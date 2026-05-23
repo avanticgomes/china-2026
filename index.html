@@ -178,6 +178,7 @@
 
   .legend-line.rail { border-top-color: var(--ink); }
   .legend-line.rail-return { border-top-color: var(--ink); opacity: 0.5; border-top-width: 1.5px; }
+  .legend-line.flight { border-top-color: var(--accent); border-top-style: dashed; }
 
   .leaflet-popup-content-wrapper {
     border-radius: 4px;
@@ -370,7 +371,7 @@
 
   .option-tab {
     flex: 1;
-    padding: 18px 20px;
+    padding: 16px 16px;
     background: transparent;
     border: none;
     border-right: 1px solid var(--rule);
@@ -406,7 +407,7 @@
   }
 
   .option-tab-name {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.3;
   }
@@ -766,10 +767,10 @@
       <span>Group of 6</span>
     </div>
 
-    <h1>China — twenty-three days, three options.</h1>
+    <h1>China — twenty-three days, four options.</h1>
 
     <p class="subtitle">
-      From Shanghai north to Beijing, then a middle stretch with three possible routes — pick the one that fits. All end with Sichuan's pandas and the alpine lakes of Jiuzhaigou + Huanglong, and a direct overnight home from Chengdu.
+      From Shanghai north to Beijing, then a middle stretch with four possible routes — pick the one that fits. All end with Sichuan's pandas and the alpine lakes of Jiuzhaigou + Huanglong, and a direct overnight home from Chengdu.
     </p>
 
     <div class="quick-stats">
@@ -783,7 +784,7 @@
       </div>
       <div>
         <div class="stat-label">Routes</div>
-        <div class="stat-value">3 options</div>
+        <div class="stat-value">4 options</div>
       </div>
       <div>
         <div class="stat-label">Group joins</div>
@@ -1109,7 +1110,7 @@
         </div>
         <div class="highlight-meta">
           <div class="highlight-name">Three Natural Bridges</div>
-          <div class="highlight-tag">Wulong · Options 1 &amp; 3</div>
+          <div class="highlight-tag">Wulong · Options 1, 3 &amp; 4</div>
           <div class="highlight-link">View photos<span>→</span></div>
         </div>
       </a>
@@ -1147,7 +1148,7 @@
         </div>
         <div class="highlight-meta">
           <div class="highlight-name">Avatar Mountains</div>
-          <div class="highlight-tag">Zhangjiajie · Options 2 &amp; 3</div>
+          <div class="highlight-tag">Zhangjiajie · Options 2, 3 &amp; 4</div>
           <div class="highlight-link">View photos<span>→</span></div>
         </div>
       </a>
@@ -1345,8 +1346,8 @@
 <section id="itinerary">
   <div class="container">
     <div class="section-label">Routes &amp; day-by-day</div>
-    <h2>Twenty-three days, three routes.</h2>
-    <p class="section-intro">The Shanghai start, Beijing days, Sichuan finale, and Sun Sep 27 return are locked across all three. The middle stretch — between Beijing and the Chengdu arrival — is where the routes diverge. Switch the tab to see each version's day-by-day; the map below redraws to match.</p>
+    <h2>Twenty-three days, four routes.</h2>
+    <p class="section-intro">The Shanghai start, Beijing days, Sichuan finale, and Sun Sep 27 return are locked across all four. The middle stretch — between Beijing and the Chengdu arrival — is where the routes diverge. Switch the tab to see each version's day-by-day; the map below redraws to match.</p>
 
     <div class="option-selector">
       <button class="option-tab active" data-option="1">
@@ -1364,6 +1365,11 @@
         <div class="option-tab-name">Xi'an + Wulong + Zhangjiajie</div>
         <div class="option-tab-vibe">Landscape maximalist · no Guizhou</div>
       </button>
+      <button class="option-tab" data-option="4">
+        <div class="option-tab-num">Option 4</div>
+        <div class="option-tab-name">Same stops, cleaner arc</div>
+        <div class="option-tab-vibe">Xi'an → Zhangjiajie → Wulong → Chongqing · 1 flight</div>
+      </button>
     </div>
 
     <div class="map-wrap option-map">
@@ -1371,6 +1377,7 @@
       <div class="map-legend">
         <div class="legend-title">Legend</div>
         <div class="legend-item"><span class="legend-line rail"></span> Outbound rail</div>
+        <div class="legend-item"><span class="legend-line flight"></span> Flight (Option 4 only)</div>
         <div class="legend-item"><span class="legend-line rail-return"></span> Return rail</div>
       </div>
     </div>
@@ -1891,6 +1898,180 @@
       </div>
     </div>
 
+
+    <!-- =========================================================
+         OPTION 4: SAME STOPS, CLEANER ARC (with 1 flight)
+         ========================================================= -->
+    <div class="option-panel" data-option="4">
+
+      <div class="option-summary">
+        <strong>Beijing → Xi'an → Zhangjiajie → Wulong → Chongqing → Chengdu.</strong> Same stops as Option 3, reordered for a cleaner monotonic geographic arc — one consistent direction southwest, no doubling back. Trade: <em>one 1.5h flight</em> (Xi'an → Zhangjiajie) breaks the all-rail elegance, but you save a full day of transit and reach Zhangjiajie at peak energy. Wulong becomes an en-route half-day stop on the way to Chongqing rather than an overnight.
+      </div>
+
+      <!-- WEEK 1: same as other options -->
+      <div class="week-block">
+        <div class="week-header">
+          <div class="week-title">Week 1 — Shanghai &amp; the imperial north</div>
+          <div class="week-dates">Sep 5 — 11</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 1<small>SAT · SEP 5</small></div>
+          <div class="day-place">Shanghai<span class="transport">Solo · Arrive AM</span></div>
+          <div class="day-detail">Land PVG Saturday morning. French Concession, Bund at sunset.</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 2<small>SUN · SEP 6</small></div>
+          <div class="day-place">Shanghai food &amp; markets<span class="transport">Solo</span></div>
+          <div class="day-detail">Slow solo food-and-markets day. Back to meet group Sun night.</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 3<small>MON · SEP 7</small></div>
+          <div class="day-place">Shanghai<span class="transport">First full group day</span></div>
+          <div class="day-detail">Yu Garden &amp; old town morning, Bund at sunset.</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 4<small>TUE · SEP 8</small></div>
+          <div class="day-place">Suzhou half-day + chill Shanghai<span class="transport">HSR 30min</span></div>
+          <div class="day-detail">Suzhou morning — Humble Administrator's Garden + Pingjiang lunch. Back to Shanghai mid-afternoon for a slow evening: French Concession dinner, drinks, the city's nightlife.</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 5<small>WED · SEP 9</small></div>
+          <div class="day-place">Shanghai → Beijing<span class="transport">Morning G-train · 4.5h</span></div>
+          <div class="day-detail">Morning train, afternoon Jingshan Park + hutongs.</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 6<small>THU · SEP 10</small></div>
+          <div class="day-place">Beijing</div>
+          <div class="day-detail">Forbidden City, Temple of Heaven, Peking duck.</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 7<small>FRI · SEP 11</small></div>
+          <div class="day-place">Great Wall<span class="transport">Day trip</span></div>
+          <div class="day-detail">Mutianyu. Full day.</div>
+        </div>
+      </div>
+
+      <!-- WEEK 2: Beijing → Xi'an → Zhangjiajie -->
+      <div class="week-block">
+        <div class="week-header">
+          <div class="week-title">Week 2 — Silk Road food &amp; the Avatar Mountains</div>
+          <div class="week-dates">Sep 12 — 19</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 8<small>SAT · SEP 12</small></div>
+          <div class="day-place">Summer Palace<span class="transport">Beijing · Full day</span></div>
+          <div class="day-detail">Final Beijing day. Kunming Lake, Long Corridor, Marble Boat. Hutong farewell dinner.</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 9<small>SUN · SEP 13</small></div>
+          <div class="day-place">Beijing → Xi'an<span class="transport">HSR · 4.5h</span></div>
+          <div class="day-detail">Mid-morning train. Afternoon arrival, drop bags. <em>City wall bike ride at sunset</em> — 14km Ming-dynasty rampart, two hours on rented bikes. Dinner in the Muslim Quarter — biang biang noodles, cumin lamb skewers, roujiamo. Silk Road cuisine, no warriors required.</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 10<small>MON · SEP 14</small></div>
+          <div class="day-place">Xi'an → Zhangjiajie<span class="transport">Flight · 1.5h</span></div>
+          <div class="day-detail">Lazy Muslim Quarter breakfast — persimmon pancakes, hand-cut cold noodles. Late-morning taxi to Xi'an Xianyang Airport (XIY). Midday flight to Zhangjiajie Hehua (DYG), ~1.5h. Transfer to Wulingyuan (~30min drive) by mid-afternoon. Settle in, light dinner. Optional Zhang Yimou show <em>Charming Xiangxi</em> if energy holds.</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 11<small>TUE · SEP 15</small></div>
+          <div class="day-place">Zhangjiajie — Avatar Mountains</div>
+          <div class="day-detail">Zhangjiajie National Forest Park. Bailong Elevator up to Yuanjiajie. The Hallelujah Mountain — the sandstone pillar that inspired Avatar's floating mountains. Tianzi Mountain panoramic views, Ten Mile Gallery. Park ticket valid 4 days, so no rush.</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 12<small>WED · SEP 16</small></div>
+          <div class="day-place">Zhangjiajie — Tianmen Mountain<span class="transport">Drive · 30min</span></div>
+          <div class="day-detail">World's longest cable car up to the summit. Glass skywalk. 999 stairs down to <em>Tianmen Cave</em> (Heaven's Gate). 99-bend road back.</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 13<small>THU · SEP 17</small></div>
+          <div class="day-place">Zhangjiajie Grand Canyon<span class="transport">Drive · 40min</span></div>
+          <div class="day-detail">Third Zhangjiajie day — the <em>Glass Bridge</em>, world's highest and longest glass-bottom bridge, 430m above the canyon floor. Optional bungee jump for the bold. Afternoon: a final sunset at Wulingyuan, dinner local.</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 14<small>FRI · SEP 18</small></div>
+          <div class="day-place">Zhangjiajie → Wulong → Chongqing<small>Two HSR legs · park stop en route</small></div>
+          <div class="day-detail"><em>Intense transit day, but no overnight at Wulong needed.</em> Early HSR Zhangjiajie West → Wulong South (~2h). Drop bags at the station luggage storage. Park shuttle into Wulong Karst: <em>Three Natural Bridges</em> + Longshuixia Gorge in one fast push. Late-afternoon HSR Wulong South → Chongqing East (~1h). Hongya Cave lit up at night, hotpot for dinner.</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 15<small>SAT · SEP 19</small></div>
+          <div class="day-place">Chongqing</div>
+          <div class="day-detail">Full Chongqing day. Ciqikou old town, Yangtze cable car, the stacked-up megacity views. Rooftop bar in the evening.</div>
+        </div>
+      </div>
+
+      <!-- WEEK 3: Chengdu + Sichuan finale -->
+      <div class="week-block">
+        <div class="week-header">
+          <div class="week-title">Week 3 — Chengdu &amp; the alpine finale</div>
+          <div class="week-dates">Sep 20 — 27</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 16<small>SUN · SEP 20</small></div>
+          <div class="day-place">Chongqing → Chengdu<span class="transport">HSR · 1.5h</span></div>
+          <div class="day-detail">Morning HSR to Chengdu, ~1.5h — the shortest inter-city leg of the trip. Afternoon: Wenshu Monastery or Kuanzhai Alley wander, settle in. Evening: Jinli for dinner, Sichuan opera with face-changing.</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 17<small>MON · SEP 21</small></div>
+          <div class="day-place">Chengdu</div>
+          <div class="day-detail">Pandas at 7:30am sharp. People's Park tea house in the afternoon — ear-cleaners, mahjong, the slow Chengdu rhythm. Optional half-day to Leshan Giant Buddha (~2h each way by HSR) if anyone wants to add it. Evening: hotpot or street food at Yulin neighborhood.</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 18<small>TUE · SEP 22</small></div>
+          <div class="day-place">Chengdu → Jiuzhaigou<span class="transport">Rail · 2h + shuttle · 2h</span></div>
+          <div class="day-detail">Early morning train from Chengdu East to Huanglongjiuzhai. Shuttle bus from the station to the park. Arrive afternoon, settle in, hydrate.</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 19<small>WED · SEP 23</small></div>
+          <div class="day-place">Jiuzhaigou — south arm</div>
+          <div class="day-detail">First full park day. Long Lake, Five-Color Pond, Pearl Shoal Falls. Enter at 7am opening to beat the crowds.</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 20<small>THU · SEP 24</small></div>
+          <div class="day-place">Jiuzhaigou — north arm</div>
+          <div class="day-detail">Second full park day, north arm — Mirror Lake, Nuorilang Falls, Pearl Lake, the Y-junction viewpoints. Autumn colors just turning at this elevation.</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 21<small>FRI · SEP 25</small></div>
+          <div class="day-place">Huanglong<span class="transport">Drive · 2h each way</span></div>
+          <div class="day-detail">Full day trip from Jiuzhaigou base. Calcite terraced pools — alien, otherworldly, the trip's most photographed landscape. <em>Highest altitude day</em> (3,500–3,900m at the upper viewpoints). Cable car up, walk down past the terraces.</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 22<small>SAT · SEP 26</small></div>
+          <div class="day-place">Jiuzhaigou → Chengdu<span class="transport">Shuttle + rail · ~4h</span></div>
+          <div class="day-detail">Slow morning, afternoon transit back to Chengdu. Taxi to Tianfu Airport. Final hotpot somewhere if there's time. Be at TFU by ~22:30.</div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-num">Day 23<small>SUN · SEP 27</small></div>
+          <div class="day-place">Chengdu → Sydney<span class="transport">Departs 01:35 · Direct</span></div>
+          <div class="day-detail">Sichuan Airlines 3U3891 direct to Sydney. Land SYD ~14:00 Sun afternoon. Back at work Monday.</div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 </section>
 
@@ -2087,14 +2268,20 @@
 
       <div class="booking-item">
         <div class="booking-what">Wulong tour or car</div>
-        <div class="booking-detail"><em>Options 1 &amp; 3.</em> The HSR + shuttle is doable independently, but a private driver simplifies hotel-to-park transfers and the onward connection. Trip.com lists Wulong day-tour packages.</div>
+        <div class="booking-detail"><em>Options 1, 3 &amp; 4.</em> The HSR + shuttle is doable independently, but a private driver simplifies hotel-to-park transfers and the onward connection. Trip.com lists Wulong day-tour packages. <em>Note: Option 4 uses Wulong as an en-route half-day stop (no overnight), so the driver only needs to handle one day's park transport.</em></div>
         <div class="booking-priority">By July</div>
       </div>
 
       <div class="booking-item">
         <div class="booking-what">Zhangjiajie tours &amp; tickets</div>
-        <div class="booking-detail"><em>Options 2 &amp; 3.</em> Park entry, Bailong Elevator, Tianmen Mountain cable car, and Glass Bridge are all separately ticketed. Book a 3-day private driver from Wulingyuan (English-speaking) via Trip.com or YellowBirdTour. Avoid booking all four parks as one combo — too rushed.</div>
+        <div class="booking-detail"><em>Options 2, 3 &amp; 4.</em> Park entry, Bailong Elevator, Tianmen Mountain cable car, and Glass Bridge are all separately ticketed. Book a 3-day private driver from Wulingyuan (English-speaking) via Trip.com or YellowBirdTour. Avoid booking all four parks as one combo — too rushed.</div>
         <div class="booking-priority">By July</div>
+      </div>
+
+      <div class="booking-item">
+        <div class="booking-what">Xi'an → Zhangjiajie flight</div>
+        <div class="booking-detail"><em>Option 4 only.</em> Mon Sep 14 midday flight, ~1.5h. Sichuan Airlines, China Eastern, Fuzhou Airlines all fly the route. Trip.com data suggests booking ~40 days out for best price (so late July / early August). Around $115-200 economy. Confirm flight on Xi'an Xianyang (XIY) → Zhangjiajie Hehua (DYG) — book direct, not via Changsha.</div>
+        <div class="booking-priority">By late July</div>
       </div>
 
       <div class="booking-item">
@@ -2157,13 +2344,13 @@
 
       <div class="booking-item">
         <div class="booking-what">Jiuzhaigou park tickets</div>
-        <div class="booking-detail">Two park days. Daily cap 41,000 in peak season — sells fast. Real-name booking with passport, via Trip.com or the Aba Tourism mini program. Options 1 &amp; 3: Sep 23 + Sep 24 (book Sep 8 and Sep 9). Option 2: Sep 24 + Sep 25 (book Sep 9 and Sep 10).</div>
+        <div class="booking-detail">Two park days. Daily cap 41,000 in peak season — sells fast. Real-name booking with passport, via Trip.com or the Aba Tourism mini program. Options 1, 3 &amp; 4: Sep 23 + Sep 24 (book Sep 8 and Sep 9). Option 2: Sep 24 + Sep 25 (book Sep 9 and Sep 10).</div>
         <div class="booking-priority critical">T-15 days</div>
       </div>
 
       <div class="booking-item">
         <div class="booking-what">Huanglong park tickets</div>
-        <div class="booking-detail">Daily cap 6,000. Same booking process as Jiuzhaigou. Options 1 &amp; 3: Sep 25 (book Sep 10) as a full day. Option 2: Sep 25 combined with Jiuzhaigou north arm half-day.</div>
+        <div class="booking-detail">Daily cap 6,000. Same booking process as Jiuzhaigou. Options 1, 3 &amp; 4: Sep 25 (book Sep 10) as a full day. Option 2: Sep 25 combined with Jiuzhaigou north arm half-day.</div>
         <div class="booking-priority critical">T-15 days</div>
       </div>
 
@@ -2236,7 +2423,7 @@
 
 <footer>
   <div class="container footer-inner">
-    <span>China Itinerary · v15 · option 3 refined</span>
+    <span>China Itinerary · v16 · four options</span>
     <span>Drafted April 2026</span>
   </div>
 </footer>
@@ -2247,21 +2434,23 @@
   const locations = {
     shanghai:   { name: "Shanghai",   coords: [31.2304, 121.4737], desc: "Days 1–5 · Solo Sat &amp; Sun. Group arrives Sun night. Yu Garden, Bund, Suzhou half-day, French Concession nights." },
     beijing:    { name: "Beijing",    coords: [39.9042, 116.4074], desc: "Days 5–9 · Forbidden City, Great Wall at Mutianyu, hutongs, Summer Palace." },
-    xian:       { name: "Xi'an",      coords: [34.2658, 108.9541], desc: "Options 1 &amp; 3 · City wall sunset bike ride, Muslim Quarter food. Option 1 adds the Terracotta Army; Option 3 is food-only." },
+    xian:       { name: "Xi'an",      coords: [34.2658, 108.9541], desc: "Options 1, 3 &amp; 4 · City wall sunset bike ride, Muslim Quarter food. Option 1 adds the Terracotta Army; Options 3 &amp; 4 are food-only." },
     changsha:   { name: "Changsha",   coords: [28.2278, 112.9388], desc: "Option 2 only · Day 9 · Hunan transit stop. Wenheyou neo-retro food district." },
-    zhangjiajie:{ name: "Zhangjiajie",coords: [29.1170, 110.4790], desc: "Options 2 &amp; 3 · Avatar Mountains, Tianmen Cave, glass walkways. Wulingyuan + Tianmen + Grand Canyon." },
-    chongqing:  { name: "Chongqing",  coords: [29.5657, 106.5512], desc: "Hongya Cave, hotpot, the vertical megacity, Yangtze cable car." },
-    wulong:     { name: "Wulong",     coords: [29.3245, 107.7610], desc: "Options 1 &amp; 3 · UNESCO karst — Three Natural Bridges (Transformers), Longshuixia Gorge." },
+    zhangjiajie:{ name: "Zhangjiajie",coords: [29.1170, 110.4790], desc: "Options 2, 3 &amp; 4 · Avatar Mountains, Tianmen Cave, glass walkways. Wulingyuan + Tianmen + Grand Canyon." },
+    chongqing:  { name: "Chongqing",  coords: [29.5657, 106.5512], desc: "All options visit · Hongya Cave, hotpot, the vertical megacity, Yangtze cable car." },
+    wulong:     { name: "Wulong",     coords: [29.3245, 107.7610], desc: "Options 1, 3 &amp; 4 · UNESCO karst — Three Natural Bridges (Transformers), Longshuixia Gorge." },
     kaili:      { name: "Kaili / Xijiang", coords: [26.4910, 108.1732], desc: "Options 1 &amp; 2 · Miao village stay, drum towers, wine ceremony at dinner. Skipped in Option 3." },
     chengdu:    { name: "Chengdu",    coords: [30.5728, 104.0668], desc: "Pandas at 7:30am, People's Park tea house, Sichuan opera. Return for the redeye home from Tianfu Airport.", isEnd: true },
     jiuzhaigou: { name: "Jiuzhaigou + Huanglong", coords: [33.2600, 103.9186], desc: "Two full Jiuzhaigou park days + Huanglong calcite terraces day trip." }
   };
 
-  // Three route sequences (which locations get connected by rail lines)
+  // Three route sequences (which locations get connected by rail/flight lines)
+  // flightLegs: indices in the sequence where the leg from stop[i] to stop[i+1] is a flight
   const routes = {
-    1: ["shanghai", "beijing", "xian", "chongqing", "wulong", "kaili", "chengdu", "jiuzhaigou", "chengdu"],
-    2: ["shanghai", "beijing", "changsha", "zhangjiajie", "kaili", "chongqing", "chengdu", "jiuzhaigou", "chengdu"],
-    3: ["shanghai", "beijing", "xian", "chongqing", "wulong", "zhangjiajie", "chengdu", "jiuzhaigou", "chengdu"]
+    1: { stops: ["shanghai", "beijing", "xian", "chongqing", "wulong", "kaili", "chengdu", "jiuzhaigou", "chengdu"], flightLegs: [] },
+    2: { stops: ["shanghai", "beijing", "changsha", "zhangjiajie", "kaili", "chongqing", "chengdu", "jiuzhaigou", "chengdu"], flightLegs: [] },
+    3: { stops: ["shanghai", "beijing", "xian", "chongqing", "wulong", "zhangjiajie", "chengdu", "jiuzhaigou", "chengdu"], flightLegs: [] },
+    4: { stops: ["shanghai", "beijing", "xian", "zhangjiajie", "wulong", "chongqing", "chengdu", "jiuzhaigou", "chengdu"], flightLegs: [2] }
   };
 
   // Numbering on markers shows the order of visit for the active route
@@ -2291,8 +2480,10 @@
   const ACCENT = '#b8472d';
   const SOFT = '#555';
 
-  function legStyle(isReturn) {
-    if (isReturn) return { color: INK, weight: 1.5, opacity: 0.5 };
+  function legStyle(legType) {
+    // legType: 'rail' | 'flight' | 'return'
+    if (legType === 'return') return { color: INK, weight: 1.5, opacity: 0.5 };
+    if (legType === 'flight') return { color: ACCENT, weight: 2, opacity: 0.75, dashArray: '6, 6' };
     return { color: INK, weight: 2, opacity: 0.85 };
   }
 
@@ -2324,7 +2515,9 @@
 
   function drawRoute(routeNum) {
     activeRoute = routeNum;
-    const sequence = routes[routeNum];
+    const route = routes[routeNum];
+    const sequence = route.stops;
+    const flightLegs = route.flightLegs || [];
 
     // Clear previous polylines and markers
     polylines.forEach(p => map.removeLayer(p));
@@ -2360,8 +2553,15 @@
     for (let i = 0; i < sequence.length - 1; i++) {
       const from = locations[sequence[i]];
       const to = locations[sequence[i + 1]];
-      const isReturn = (i === sequence.length - 2); // last leg = return to chengdu
-      const line = L.polyline([from.coords, to.coords], legStyle(isReturn)).addTo(map);
+      let legType;
+      if (i === sequence.length - 2) {
+        legType = 'return'; // last leg = return to chengdu
+      } else if (flightLegs.includes(i)) {
+        legType = 'flight';
+      } else {
+        legType = 'rail';
+      }
+      const line = L.polyline([from.coords, to.coords], legStyle(legType)).addTo(map);
       polylines.push(line);
     }
   }
