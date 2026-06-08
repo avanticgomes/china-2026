@@ -636,7 +636,7 @@
 
   /* HOTELS */
   .hotel-stop {
-    margin-bottom: 56px;
+    margin-bottom: 28px;
   }
 
   .hotel-stop:last-child { margin-bottom: 0; }
@@ -646,13 +646,13 @@
     grid-template-columns: auto 1fr auto;
     gap: 16px;
     align-items: baseline;
-    margin-bottom: 8px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--ink);
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule-strong);
   }
 
   .hotel-stop-num {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--accent);
   }
@@ -672,101 +672,13 @@
   .hotel-area {
     font-size: 13px;
     color: var(--ink-soft);
-    margin-bottom: 24px;
-    line-height: 1.55;
+    margin-bottom: 0;
+    line-height: 1.6;
   }
 
   .hotel-area strong {
     color: var(--ink);
     font-weight: 600;
-  }
-
-  .hotel-options-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-bottom: 20px;
-  }
-
-  .hotel-card {
-    border: 1px solid var(--rule-strong);
-    border-radius: 4px;
-    padding: 18px 20px;
-    background: var(--paper);
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    transition: border-color 0.2s ease;
-  }
-
-  .hotel-card:hover {
-    border-color: var(--ink-soft);
-  }
-
-  .hotel-card-label {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-    margin-bottom: 2px;
-  }
-
-  .hotel-card-name {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--ink);
-    line-height: 1.3;
-    min-height: 20px;
-  }
-
-  .hotel-card-name.empty {
-    color: var(--ink-faint);
-    font-style: italic;
-    font-weight: 400;
-  }
-
-  .hotel-card-meta {
-    font-size: 12px;
-    color: var(--ink-soft);
-    line-height: 1.5;
-    flex-grow: 1;
-  }
-
-  .hotel-card-meta .empty-line {
-    color: var(--ink-faint);
-    font-style: italic;
-    display: block;
-  }
-
-  .hotel-card-price {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--accent);
-    margin-top: 8px;
-  }
-
-  .hotel-card-link {
-    font-size: 12px;
-    color: var(--ink-faint);
-    margin-top: 4px;
-    word-break: break-all;
-  }
-
-  .hotel-vote-slot {
-    background: var(--paper-deep);
-    border: 1px dashed var(--rule-strong);
-    border-radius: 4px;
-    padding: 16px 20px;
-    font-size: 12px;
-    color: var(--ink-faint);
-    line-height: 1.55;
-    text-align: center;
-  }
-
-  .hotel-vote-slot strong {
-    color: var(--ink-soft);
-    font-weight: 500;
   }
 
   /* NOTES */
@@ -822,7 +734,6 @@
     .notes-grid { grid-template-columns: 1fr; }
     .apps-grid { grid-template-columns: 1fr; gap: 0; }
     .highlights-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-    .hotel-options-grid { grid-template-columns: 1fr; gap: 12px; }
     .hotel-header { grid-template-columns: auto 1fr; }
     .hotel-stop-nights { grid-column: 1 / -1; }
     .booking-item { grid-template-columns: 1fr; gap: 6px; padding: 12px 0; }
@@ -1720,8 +1631,8 @@
     <div class="booking-phase">
       <div class="phase-header">
         <div class="phase-when">Now</div>
-        <div class="phase-title">4+ months out · Lock in the big-ticket items</div>
-        <div class="phase-dates">By end of May 2026</div>
+        <div class="phase-title">~3 months out · Lock in the big-ticket items</div>
+        <div class="phase-dates">June 2026 — already running close</div>
       </div>
 
       <div class="booking-item">
@@ -1820,7 +1731,7 @@
       <div class="phase-header">
         <div class="phase-when">15 days before each leg</div>
         <div class="phase-title">15-day rolling window · The China-side bookings open</div>
-        <div class="phase-dates">Starting Wed Aug 19</div>
+        <div class="phase-dates">Starting Mon Aug 25</div>
       </div>
 
       <div class="booking-callout" style="margin-bottom: 16px; margin-top: 8px;">
@@ -1890,8 +1801,8 @@
 <section id="hotels">
   <div class="container">
     <div class="section-label">Hotels</div>
-    <h2>Eight stays to lock in.</h2>
-    <p class="section-intro">One block per stop. Neighborhood guidance below each header — those are starting points, not commandments. Fill in 2–3 candidates per stop and let the group vote however you like (StrawPoll, Google Form, WhatsApp). Empty fields are placeholders you can edit directly.</p>
+    <h2>Eight stays, where to look.</h2>
+    <p class="section-intro">One block per stop, with neighborhood guidance — opinionated starting points based on the day's activities and transit logistics. Override anything the group disagrees with once you start gathering candidates.</p>
 
     <!-- (1) Shanghai -->
     <div class="hotel-stop">
@@ -1901,39 +1812,6 @@
         <div class="hotel-stop-nights">4 nights · Sep 5–8</div>
       </div>
       <div class="hotel-area"><strong>Suggested area:</strong> French Concession (Xuhui or Jing'an) — walkable, leafy, the heart of Shanghai's bar and restaurant scene, ~15min taxi to the Bund. Avoid Pudong unless someone wants the Lujiazui skyline view (cheaper but isolated).</div>
-      <div class="hotel-options-grid">
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option A</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option B</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option C</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-      </div>
-      <div class="hotel-vote-slot"><strong>Vote placeholder</strong> — paste StrawPoll/Google Form embed code here, or link out to external voting.</div>
     </div>
 
     <!-- (2) Beijing -->
@@ -1944,39 +1822,6 @@
         <div class="hotel-stop-nights">3 nights · Sep 9–11</div>
       </div>
       <div class="hotel-area"><strong>Suggested area:</strong> Near Wangfujing or Qianmen for proximity to Forbidden City + subway access, OR a hutong courtyard hotel in Dongcheng (Nanluoguxiang area) for atmosphere. Avoid Chaoyang CBD — too far from the imperial core.</div>
-      <div class="hotel-options-grid">
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option A</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option B</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option C</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-      </div>
-      <div class="hotel-vote-slot"><strong>Vote placeholder</strong> — paste StrawPoll/Google Form embed code here, or link out to external voting.</div>
     </div>
 
     <!-- (3) Xi'an -->
@@ -1987,39 +1832,6 @@
         <div class="hotel-stop-nights">2 nights · Sep 12–13</div>
       </div>
       <div class="hotel-area"><strong>Suggested area:</strong> Inside the city wall, near the Bell Tower (Zhonglou) — walkable to the Muslim Quarter and city wall bike rental. The wall area is touristy but compact. Avoid hotels outside the wall (they're cheaper but you lose the walking radius).</div>
-      <div class="hotel-options-grid">
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option A</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option B</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option C</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-      </div>
-      <div class="hotel-vote-slot"><strong>Vote placeholder</strong> — paste StrawPoll/Google Form embed code here, or link out to external voting.</div>
     </div>
 
     <!-- (4) Chongqing -->
@@ -2030,39 +1842,6 @@
         <div class="hotel-stop-nights">1 night · Sep 14 (overnight only)</div>
       </div>
       <div class="hotel-area"><strong>Suggested area:</strong> Near Hongya Cave / Jiefangbei — you arrive 14:30 and leave 10:30 next morning, so walking distance to the night view matters more than amenities. A station-area hotel near Chongqing East is the practical alternative.</div>
-      <div class="hotel-options-grid">
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option A</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option B</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option C</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-      </div>
-      <div class="hotel-vote-slot"><strong>Vote placeholder</strong> — paste StrawPoll/Google Form embed code here, or link out to external voting.</div>
     </div>
 
     <!-- (5) Wulingyuan / Zhangjiajie -->
@@ -2073,39 +1852,6 @@
         <div class="hotel-stop-nights">3 nights · Sep 15–17</div>
       </div>
       <div class="hotel-area"><strong>Suggested area:</strong> Inside <em>Wulingyuan Scenic Area entrance</em> — not Zhangjiajie city, which is ~45min away. Hotels at the park entrance let you walk in at 7am and skip the transit. Pipaxi or Sanjiakou neighborhoods are the main hotel clusters. Look for "Wulingyuan" in the address, not "Zhangjiajie."</div>
-      <div class="hotel-options-grid">
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option A</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option B</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option C</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-      </div>
-      <div class="hotel-vote-slot"><strong>Vote placeholder</strong> — paste StrawPoll/Google Form embed code here, or link out to external voting.</div>
     </div>
 
     <!-- (6) Kaili + Xijiang -->
@@ -2116,39 +1862,6 @@
         <div class="hotel-stop-nights">2 nights · Sep 18 Kaili town · Sep 19 inside Xijiang scenic area</div>
       </div>
       <div class="hotel-area"><strong>Split booking — two different places.</strong> Day 14 (Kaili): a basic clean hotel near the station or downtown is fine — you arrive afternoon and leave next morning. Day 15 (Xijiang): book <em>inside the scenic area</em> so you're there after day-trippers leave and the village lights come on. The local agency handling your driver can usually arrange both.</div>
-      <div class="hotel-options-grid">
-        <div class="hotel-card">
-          <div class="hotel-card-label">Kaili (Day 14)</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-        <div class="hotel-card">
-          <div class="hotel-card-label">Xijiang (Day 15)</div>
-          <div class="hotel-card-name empty">Guesthouse name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Inside scenic area…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-        <div class="hotel-card">
-          <div class="hotel-card-label">Backup option</div>
-          <div class="hotel-card-name empty">Alternative…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">For either night…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-      </div>
-      <div class="hotel-vote-slot"><strong>Vote placeholder</strong> — paste StrawPoll/Google Form embed code here, or link out to external voting.</div>
     </div>
 
     <!-- (7) Chengdu -->
@@ -2156,42 +1869,9 @@
       <div class="hotel-header">
         <div class="hotel-stop-num">(7)</div>
         <div class="hotel-stop-name">Chengdu</div>
-        <div class="hotel-stop-nights">3 nights · Sep 20–21 + return Sep 26</div>
+        <div class="hotel-stop-nights">2 nights · Sep 20–21</div>
       </div>
-      <div class="hotel-area"><strong>Suggested area:</strong> Jinli or Kuanzhai Alley for atmosphere, OR near Chengdu East station for the easy Jiuzhaigou train and TFU airport transit on Day 22. Pick one hotel for all three nights if possible — you can leave a bag during the Jiuzhaigou stretch.</div>
-      <div class="hotel-options-grid">
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option A</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option B</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option C</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-      </div>
-      <div class="hotel-vote-slot"><strong>Vote placeholder</strong> — paste StrawPoll/Google Form embed code here, or link out to external voting.</div>
+      <div class="hotel-area"><strong>Suggested area:</strong> Jinli or Kuanzhai Alley for atmosphere, OR near Chengdu East station for the Day 18 Jiuzhaigou train. <em>Note: Day 22 (Sat Sep 26) doesn't need a hotel — you arrive Chengdu East ~18:00 from Jiuzhaigou and go straight to TFU airport for the 01:35 redeye home. Stash any extra bags at the Chengdu hotel during the Jiuzhaigou stretch.</em></div>
     </div>
 
     <!-- (8) Jiuzhaigou / Zhangzha Town -->
@@ -2202,39 +1882,6 @@
         <div class="hotel-stop-nights">4 nights · Sep 22–25</div>
       </div>
       <div class="hotel-area"><strong>Suggested area:</strong> Zhangzha Town (沟口 / Goukou) — the cluster of hotels at the Jiuzhaigou park entrance, ~10min walk from the gate. Limited high-end options. Look for hotels with heating + reliable hot water (autumn nights get cold at 2,000m). Avoid hotels in Songpan or Chuanzhusi — too far from the daily park visits.</div>
-      <div class="hotel-options-grid">
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option A</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option B</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-        <div class="hotel-card">
-          <div class="hotel-card-label">Option C</div>
-          <div class="hotel-card-name empty">Hotel name…</div>
-          <div class="hotel-card-meta">
-            <span class="empty-line">Neighborhood…</span>
-            <span class="empty-line">Vibe / notes…</span>
-          </div>
-          <div class="hotel-card-price">~$xxx/night</div>
-          <div class="hotel-card-link">booking link…</div>
-        </div>
-      </div>
-      <div class="hotel-vote-slot"><strong>Vote placeholder</strong> — paste StrawPoll/Google Form embed code here, or link out to external voting.</div>
     </div>
 
   </div>
@@ -2267,7 +1914,7 @@
 
 <footer>
   <div class="container footer-inner">
-    <span>China Itinerary · v24 · single route + hotels</span>
+    <span>China Itinerary · v25 · cleanups</span>
     <span>Drafted April 2026</span>
   </div>
 </footer>
