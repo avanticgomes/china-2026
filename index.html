@@ -635,77 +635,54 @@
   }
 
   /* HOTELS */
-  .hotel-stop {
-    margin-bottom: 28px;
+  /* WEATHER */
+  .weather-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-bottom: 24px;
   }
 
-  .hotel-stop:last-child { margin-bottom: 0; }
-
-  .hotel-header {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 16px;
-    align-items: baseline;
-    margin-bottom: 10px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--rule-strong);
+  .weather-table th,
+  .weather-table td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
   }
 
-  .hotel-stop-num {
-    font-size: 16px;
+  .weather-table th {
+    font-size: 11px;
     font-weight: 600;
-    color: var(--accent);
-  }
-
-  .hotel-stop-name {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--ink);
-  }
-
-  .hotel-stop-nights {
-    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
     color: var(--ink-faint);
-    letter-spacing: 0.02em;
+    border-bottom: 2px solid var(--ink);
   }
 
-  .hotel-area {
+  .weather-table td:first-child {
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .weather-table td:nth-child(2) {
+    white-space: nowrap;
+    color: var(--accent);
+    font-feature-settings: 'tnum';
+  }
+
+  .weather-packing {
     font-size: 13px;
-    color: var(--ink-soft);
-    margin-bottom: 0;
     line-height: 1.6;
+    background: var(--paper-deep);
+    border-left: 3px solid var(--accent);
+    padding: 16px 20px;
+    margin: 0;
   }
 
-  .hotel-area strong {
+  .weather-packing strong {
     color: var(--ink);
     font-weight: 600;
-  }
-
-  /* NOTES */
-  .notes-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-
-  .note-card {
-    border: 1px solid var(--rule-strong);
-    padding: 24px;
-    background: var(--paper);
-    border-radius: 4px;
-  }
-
-  .note-title {
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--ink);
-  }
-
-  .note-body {
-    font-size: 13px;
-    color: var(--ink-soft);
-    line-height: 1.55;
   }
 
   /* FOOTER */
@@ -731,11 +708,8 @@
     .flights-grid { grid-template-columns: 1fr; }
     .day-row { grid-template-columns: 1fr; gap: 6px; padding: 14px 0; }
     .week-header { flex-direction: column; gap: 4px; align-items: flex-start; }
-    .notes-grid { grid-template-columns: 1fr; }
     .apps-grid { grid-template-columns: 1fr; gap: 0; }
     .highlights-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-    .hotel-header { grid-template-columns: auto 1fr; }
-    .hotel-stop-nights { grid-column: 1 / -1; }
     .booking-item { grid-template-columns: 1fr; gap: 6px; padding: 12px 0; }
     .booking-priority { text-align: left; }
     .phase-header { grid-template-columns: 1fr; gap: 6px; }
@@ -1114,7 +1088,7 @@
         </div>
         <div class="highlight-meta">
           <div class="highlight-name">Avatar Mountains</div>
-          <div class="highlight-tag">Zhangjiajie · Days 11–13</div>
+          <div class="highlight-tag">Zhangjiajie · Days 12–14</div>
           <div class="highlight-link">View photos<span>→</span></div>
         </div>
       </a>
@@ -1161,7 +1135,7 @@
         </div>
         <div class="highlight-meta">
           <div class="highlight-name">Xijiang Miao Village</div>
-          <div class="highlight-tag">Xijiang · Days 14–15</div>
+          <div class="highlight-tag">Xijiang · Days 15–16</div>
           <div class="highlight-link">View photos<span>→</span></div>
         </div>
       </a>
@@ -1192,7 +1166,7 @@
         </div>
         <div class="highlight-meta">
           <div class="highlight-name">Giant Pandas</div>
-          <div class="highlight-tag">Chengdu · Day 17</div>
+          <div class="highlight-tag">Chengdu · Day 18</div>
           <div class="highlight-link">View photos<span>→</span></div>
         </div>
       </a>
@@ -1223,7 +1197,7 @@
         </div>
         <div class="highlight-meta">
           <div class="highlight-name">Alpine Lakes</div>
-          <div class="highlight-tag">Jiuzhaigou · Days 19–20</div>
+          <div class="highlight-tag">Jiuzhaigou · Day 20</div>
           <div class="highlight-link">View photos<span>→</span></div>
         </div>
       </a>
@@ -1378,7 +1352,7 @@
       <div class="week-block">
         <div class="week-header">
           <div class="week-title">Week 2 — Xi'an, the Avatar Mountains &amp; Guizhou</div>
-          <div class="week-dates">Sep 12 — 19</div>
+          <div class="week-dates">Sep 12 — 20</div>
         </div>
 
         <div class="day-row" data-stop="3">
@@ -1396,35 +1370,41 @@
         <div class="day-row" data-stop="4">
           <div class="day-num">Day 10<small>MON · SEP 14</small></div>
           <div class="day-place"><span class="stop-tag">(4)</span> Xi'an → Chongqing<span class="transport">HSR · dep ~09:00 Xi'an North · arr ~14:30 Chongqing East</span></div>
-          <div class="day-detail"><em>Chongqing is a short stay on this option — afternoon and evening only.</em> Early Muslim Quarter breakfast — persimmon pancakes, roujiamo to go. Taxi to Xi'an North by 08:00 for the 09:00 train. Arrive Chongqing mid-afternoon. Drop bags near Hongya Cave. <em>Hongya Cave</em> in daylight first, then watch it light up at dusk. Hotpot for dinner — yuanyang split for the heat-averse. Optional Yangtze cable car at night for the river-and-skyline view. Sleep around 22:30 — tomorrow's a mid-morning train, not an early one.</div>
+          <div class="day-detail">Early Muslim Quarter breakfast — persimmon pancakes, roujiamo to go. Taxi to Xi'an North by 08:00 for the 09:00 train. Arrive Chongqing mid-afternoon. Drop bags near Hongya Cave. <em>Hongya Cave</em> in daylight first, then watch it light up at dusk — the Ghibli-esque stilt-house complex stays magical past midnight. Hotpot for dinner — yuanyang split for the heat-averse.</div>
+        </div>
+
+        <div class="day-row" data-stop="4">
+          <div class="day-num">Day 11<small>TUE · SEP 15</small></div>
+          <div class="day-place"><span class="stop-tag">(4)</span> Chongqing — full day</div>
+          <div class="day-detail">Full day to actually see Chongqing properly. <em>Ciqikou old town</em> in the morning — Ming/Qing-era stone alleys with street food vendors, ~30min by taxi from downtown. Back into the city for lunch. Afternoon: the <em>Yangtze cable car</em> across the river (it's a working commuter line, not a tourist gimmick), then walking the stacked-up districts around Eling. Evening: rooftop bar for the megacity skyline at dusk, then night noodles somewhere local. <em>Optional ambitious version:</em> Wulong Karst day trip — 40min HSR to Wulong South, see the <em>Three Natural Bridges</em> sinkholes (the <em>Transformers</em> set), back to Chongqing by dinner. Long day but doable.</div>
         </div>
 
         <div class="day-row" data-stop="5">
-          <div class="day-num">Day 11<small>TUE · SEP 15</small></div>
+          <div class="day-num">Day 12<small>WED · SEP 16</small></div>
           <div class="day-place"><span class="stop-tag">(5)</span> Chongqing → Zhangjiajie<span class="transport">HSR · dep ~10:30 Chongqing East · arr ~13:00 Zhangjiajie West</span></div>
           <div class="day-detail">Relaxed breakfast at the hotel. Mid-morning train (G2445 or similar), arrive Zhangjiajie early afternoon. Transfer to Wulingyuan (~45min by bus). Settle in, lunch en route or local. Afternoon: a gentle start in the National Forest Park — Bailong Elevator up to the lower viewpoints, ease into the scenery. Save the big Yuanjiajie hike for tomorrow.</div>
         </div>
 
         <div class="day-row" data-stop="5">
-          <div class="day-num">Day 12<small>WED · SEP 16</small></div>
+          <div class="day-num">Day 13<small>THU · SEP 17</small></div>
           <div class="day-place"><span class="stop-tag">(5)</span> Zhangjiajie — Avatar Mountains</div>
           <div class="day-detail">Full day at <em>Yuanjiajie</em> — the Hallelujah Mountain, the sandstone pillar that inspired Avatar's floating mountains. Tianzi Mountain panoramic views, Ten Mile Gallery. Park ticket valid 4 days, plenty of time.</div>
         </div>
 
         <div class="day-row" data-stop="5">
-          <div class="day-num">Day 13<small>THU · SEP 17</small></div>
+          <div class="day-num">Day 14<small>FRI · SEP 18</small></div>
           <div class="day-place"><span class="stop-tag">(5)</span> Zhangjiajie — Tianmen Mountain<span class="transport">Drive · 30min</span></div>
-          <div class="day-detail">World's longest cable car up to the summit. Glass skywalk. 999 stairs down to <em>Tianmen Cave</em> (Heaven's Gate). 99-bend road back. <em>(The Grand Canyon / Glass Bridge area is skipped to keep Beijing 3 days and fit Avatar Mountains in. Worth a day-trip from Wulingyuan if anyone wants to extend pre-trip.)</em></div>
+          <div class="day-detail">World's longest cable car up to the summit. Glass skywalk. 999 stairs down to <em>Tianmen Cave</em> (Heaven's Gate). 99-bend road back. <em>(The Grand Canyon / Glass Bridge area is skipped to keep the pace manageable. Worth a day-trip from Wulingyuan if anyone wants to extend pre-trip.)</em></div>
         </div>
 
         <div class="day-row" data-stop="6">
-          <div class="day-num">Day 14<small>FRI · SEP 18</small></div>
+          <div class="day-num">Day 15<small>SAT · SEP 19</small></div>
           <div class="day-place"><span class="stop-tag">(6)</span> Zhangjiajie → Kaili → Xijiang<span class="transport">HSR via Huaihua + drive · arr Xijiang ~16:00</span></div>
           <div class="day-detail">Mid-morning HSR south through Hunan into Guizhou via Huaihua South — about 3.5 hours, one transfer. Arrive Kaili ~13:15. Lunch in Kaili (a quick noodle stop near the station), meet the driver, then 1h drive into the hills to <em>Xijiang Miao Village</em>. Arrive ~16:00. Settle into a viewing-platform homestay, climb up for sunset — the village lights come on around 18:30 and the day-trippers clear out. Traditional Miao long-table dinner at the homestay.</div>
         </div>
 
         <div class="day-row" data-stop="6">
-          <div class="day-num">Day 15<small>SAT · SEP 19</small></div>
+          <div class="day-num">Day 16<small>SUN · SEP 20</small></div>
           <div class="day-place"><span class="stop-tag">(6)</span> Xijiang Miao Village — full day</div>
           <div class="day-detail">Slow morning — sunrise mist through the stilt houses if you wake early. Largest Miao settlement in the world, two thousand years old. Explore the inner village, the drum tower, the wine-welcome ceremony, the museum. Optional half-day to nearby <em>Langde</em> (~45min) — a smaller, less-touristy Miao village if you want a contrast. Back to Xijiang for a second evening of lights.</div>
         </div>
@@ -1434,37 +1414,31 @@
       <div class="week-block">
         <div class="week-header">
           <div class="week-title">Week 3 — Sichuan, the alpine finale</div>
-          <div class="week-dates">Sep 20 — 27</div>
+          <div class="week-dates">Sep 21 — 27</div>
         </div>
 
         <div class="day-row" data-stop="7">
-          <div class="day-num">Day 16<small>SUN · SEP 20</small></div>
+          <div class="day-num">Day 17<small>MON · SEP 21</small></div>
           <div class="day-place"><span class="stop-tag">(7)</span> Xijiang → Kaili → Chengdu<span class="transport">Drive 1h · HSR direct · arr Chengdu East ~15:00</span></div>
           <div class="day-detail">Wake ~07:30, breakfast at the homestay, drive 08:30 back to Kaili South Station (~1h). Station by 10:00 for the ~11:00 HSR direct to Chengdu East — 4 hours, runs through Guiyang but stays on one train. Arrive Chengdu mid-afternoon. Drop bags, take the rest of the day slow: Wenshu Monastery or a walk through Jinli, dinner at Kuanzhai Alley. <em>(Want a more relaxed morning? Push to the ~12:30 train — arr Chengdu ~16:30.)</em></div>
         </div>
 
         <div class="day-row" data-stop="7">
-          <div class="day-num">Day 17<small>MON · SEP 21</small></div>
+          <div class="day-num">Day 18<small>TUE · SEP 22</small></div>
           <div class="day-place"><span class="stop-tag">(7)</span> Chengdu</div>
           <div class="day-detail">Pandas at 7:30am sharp — they're active before the heat. Then People's Park tea house for an afternoon, Sichuan opera with face-changing in the evening.</div>
         </div>
 
         <div class="day-row" data-stop="8">
-          <div class="day-num">Day 18<small>TUE · SEP 22</small></div>
-          <div class="day-place"><span class="stop-tag">(8)</span> Chengdu → Jiuzhaigou<span class="transport">HSR + shuttle · dep ~08:30 Chengdu East · arr Jiuzhaigou ~13:00</span></div>
-          <div class="day-detail">Mid-morning train (~08:30 dep) from Chengdu East to Huanglongjiuzhai, ~2h. Shuttle bus from the station to the park (~2h). Arrive around 13:00, settle in, hydrate.</div>
-        </div>
-
-        <div class="day-row" data-stop="8">
           <div class="day-num">Day 19<small>WED · SEP 23</small></div>
-          <div class="day-place"><span class="stop-tag">(8)</span> Jiuzhaigou — south arm</div>
-          <div class="day-detail">First full park day. Long Lake, Five-Color Pond, Pearl Shoal Falls. Open at 7am, beat the crowds.</div>
+          <div class="day-place"><span class="stop-tag">(8)</span> Chengdu → Jiuzhaigou<span class="transport">HSR + shuttle · dep ~08:30 Chengdu East · arr Jiuzhaigou ~13:00</span></div>
+          <div class="day-detail">Mid-morning train (~08:30 dep) from Chengdu East to Huanglongjiuzhai, ~2h. Shuttle bus from the station to the park (~2h). Arrive around 13:00, settle in at Zhangzha town, hydrate. Quiet evening — tomorrow's a long park day.</div>
         </div>
 
         <div class="day-row" data-stop="8">
           <div class="day-num">Day 20<small>THU · SEP 24</small></div>
-          <div class="day-place"><span class="stop-tag">(8)</span> Jiuzhaigou — north arm</div>
-          <div class="day-detail">Second full park day, north arm — Mirror Lake, Nuorilang Falls, Pearl Lake, the Y-junction viewpoints.</div>
+          <div class="day-place"><span class="stop-tag">(8)</span> Jiuzhaigou — both branches in one day<span class="transport">Park open 08:00 · last shuttle out ~18:00</span></div>
+          <div class="day-detail"><em>Long, busy day — but the park's Y-shape and well-run shuttle bus system make it work.</em> Enter at 08:00, shuttle straight to the top of the Rize Valley (south arm) for <em>Long Lake</em> and <em>Five-Color Pond</em> first — least crowded early. Work back down through <em>Pearl Shoal Falls</em>. Lunch at the Nuorilang Center (the Y-junction). Afternoon: shuttle up the Shuzheng Valley (north arm) — <em>Mirror Lake</em>, <em>Nuorilang Falls</em>, <em>Pearl Lake</em>, the iconic Y-junction viewpoints. Aim to exit by 18:00. <em>Use the shuttle aggressively — skip long hiking between viewpoints. The park ticket allows on/off all day.</em></div>
         </div>
 
         <div class="day-row" data-stop="8">
@@ -1746,7 +1720,7 @@
 
       <div class="booking-item">
         <div class="booking-what">Jiuzhaigou park tickets</div>
-        <div class="booking-detail">Two park days. Daily cap 41,000 in peak season — sells fast. Real-name booking with passport, via Trip.com or the Aba Tourism mini program. Sep 23 + Sep 24 (book Sep 8 and Sep 9).</div>
+        <div class="booking-detail">One park day (single-day highlights run, both branches). Daily cap 41,000 in peak season — sells fast. Real-name booking with passport, via Trip.com or the Aba Tourism mini program. Sep 24 (book Sep 9).</div>
         <div class="booking-priority critical">T-15 days</div>
       </div>
 
@@ -1798,123 +1772,71 @@
   </div>
 </section>
 
-<section id="hotels">
+<section id="weather">
   <div class="container">
-    <div class="section-label">Hotels</div>
-    <h2>Eight stays, where to look.</h2>
-    <p class="section-intro">One block per stop, with neighborhood guidance — opinionated starting points based on the day's activities and transit logistics. Override anything the group disagrees with once you start gathering candidates.</p>
+    <div class="section-label">Weather</div>
+    <h2>Mostly mild — one cold day.</h2>
+    <p class="section-intro">September is a sweet spot for China travel. Most of the trip sits in the 22–30°C zone with light layers. The shift is the alpine finale at Jiuzhaigou and Huanglong, where mornings get cold and Huanglong's upper viewpoints (3,500–3,900m) can be near freezing.</p>
 
-    <!-- (1) Shanghai -->
-    <div class="hotel-stop">
-      <div class="hotel-header">
-        <div class="hotel-stop-num">(1)</div>
-        <div class="hotel-stop-name">Shanghai</div>
-        <div class="hotel-stop-nights">4 nights · Sep 5–8</div>
-      </div>
-      <div class="hotel-area"><strong>Suggested area:</strong> French Concession (Xuhui or Jing'an) — walkable, leafy, the heart of Shanghai's bar and restaurant scene, ~15min taxi to the Bund. Avoid Pudong unless someone wants the Lujiazui skyline view (cheaper but isolated).</div>
-    </div>
+    <table class="weather-table">
+      <thead>
+        <tr>
+          <th>Stop &amp; dates</th>
+          <th>Day / Night (°C)</th>
+          <th>Conditions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>(1) Shanghai · Sep 5–8</td>
+          <td>28–30 / 22–24</td>
+          <td>Humid; small typhoon risk early Sep</td>
+        </tr>
+        <tr>
+          <td>(2) Beijing · Sep 9–11</td>
+          <td>26–28 / 14–17</td>
+          <td>Dry, clear — peak season</td>
+        </tr>
+        <tr>
+          <td>(3) Xi'an · Sep 12–13</td>
+          <td>24–26 / 13–15</td>
+          <td>Mild, mostly dry</td>
+        </tr>
+        <tr>
+          <td>(4) Chongqing · Sep 14–15</td>
+          <td>28–30 / 21–23</td>
+          <td>Hot, humid, often hazy</td>
+        </tr>
+        <tr>
+          <td>(5) Wulingyuan · Sep 16–18</td>
+          <td>22–25 / 14–17</td>
+          <td>Frequent mountain mist</td>
+        </tr>
+        <tr>
+          <td>(6) Xijiang · Sep 19–20</td>
+          <td>22–26 / 14–17</td>
+          <td>Cloudy, light rain common</td>
+        </tr>
+        <tr>
+          <td>(7) Chengdu · Sep 21–22, 26</td>
+          <td>24–26 / 17–19</td>
+          <td>Overcast, mild</td>
+        </tr>
+        <tr>
+          <td>(8) Jiuzhaigou + Huanglong · Sep 23–25</td>
+          <td>18–23 / 8–14</td>
+          <td>Cool; <strong>Huanglong much colder at altitude</strong></td>
+        </tr>
+      </tbody>
+    </table>
 
-    <!-- (2) Beijing -->
-    <div class="hotel-stop">
-      <div class="hotel-header">
-        <div class="hotel-stop-num">(2)</div>
-        <div class="hotel-stop-name">Beijing</div>
-        <div class="hotel-stop-nights">3 nights · Sep 9–11</div>
-      </div>
-      <div class="hotel-area"><strong>Suggested area:</strong> Near Wangfujing or Qianmen for proximity to Forbidden City + subway access, OR a hutong courtyard hotel in Dongcheng (Nanluoguxiang area) for atmosphere. Avoid Chaoyang CBD — too far from the imperial core.</div>
-    </div>
-
-    <!-- (3) Xi'an -->
-    <div class="hotel-stop">
-      <div class="hotel-header">
-        <div class="hotel-stop-num">(3)</div>
-        <div class="hotel-stop-name">Xi'an</div>
-        <div class="hotel-stop-nights">2 nights · Sep 12–13</div>
-      </div>
-      <div class="hotel-area"><strong>Suggested area:</strong> Inside the city wall, near the Bell Tower (Zhonglou) — walkable to the Muslim Quarter and city wall bike rental. The wall area is touristy but compact. Avoid hotels outside the wall (they're cheaper but you lose the walking radius).</div>
-    </div>
-
-    <!-- (4) Chongqing -->
-    <div class="hotel-stop">
-      <div class="hotel-header">
-        <div class="hotel-stop-num">(4)</div>
-        <div class="hotel-stop-name">Chongqing</div>
-        <div class="hotel-stop-nights">1 night · Sep 14 (overnight only)</div>
-      </div>
-      <div class="hotel-area"><strong>Suggested area:</strong> Near Hongya Cave / Jiefangbei — you arrive 14:30 and leave 10:30 next morning, so walking distance to the night view matters more than amenities. A station-area hotel near Chongqing East is the practical alternative.</div>
-    </div>
-
-    <!-- (5) Wulingyuan / Zhangjiajie -->
-    <div class="hotel-stop">
-      <div class="hotel-header">
-        <div class="hotel-stop-num">(5)</div>
-        <div class="hotel-stop-name">Wulingyuan / Zhangjiajie</div>
-        <div class="hotel-stop-nights">3 nights · Sep 15–17</div>
-      </div>
-      <div class="hotel-area"><strong>Suggested area:</strong> Inside <em>Wulingyuan Scenic Area entrance</em> — not Zhangjiajie city, which is ~45min away. Hotels at the park entrance let you walk in at 7am and skip the transit. Pipaxi or Sanjiakou neighborhoods are the main hotel clusters. Look for "Wulingyuan" in the address, not "Zhangjiajie."</div>
-    </div>
-
-    <!-- (6) Xijiang Miao Village -->
-    <div class="hotel-stop">
-      <div class="hotel-header">
-        <div class="hotel-stop-num">(6)</div>
-        <div class="hotel-stop-name">Xijiang Miao Village</div>
-        <div class="hotel-stop-nights">2 nights · Sep 18–19 · inside scenic area</div>
-      </div>
-      <div class="hotel-area"><strong>Suggested area:</strong> Book inside the scenic area, ideally at the <em>mid-mountain viewing platform</em> — the famous spot where photos of the "thousand lights at night" are taken. Boutique guesthouses there (Jianshan Yifang, Xijiang Diefei, Xijiang Yuetang) are converted Miao stilt houses with private view balconies. Avoid hotels in Kaili town or outside the scenic area entrance — you skip Kaili town entirely on this trip, driving straight from the train station to Xijiang on Day 14 afternoon.</div>
-    </div>
-
-    <!-- (7) Chengdu -->
-    <div class="hotel-stop">
-      <div class="hotel-header">
-        <div class="hotel-stop-num">(7)</div>
-        <div class="hotel-stop-name">Chengdu</div>
-        <div class="hotel-stop-nights">2 nights · Sep 20–21</div>
-      </div>
-      <div class="hotel-area"><strong>Suggested area:</strong> Jinli or Kuanzhai Alley for atmosphere, OR near Chengdu East station for the Day 18 Jiuzhaigou train. <em>Note: Day 22 (Sat Sep 26) doesn't need a hotel — you arrive Chengdu East ~18:00 from Jiuzhaigou and go straight to TFU airport for the 01:35 redeye home. Stash any extra bags at the Chengdu hotel during the Jiuzhaigou stretch.</em></div>
-    </div>
-
-    <!-- (8) Jiuzhaigou / Zhangzha Town -->
-    <div class="hotel-stop">
-      <div class="hotel-header">
-        <div class="hotel-stop-num">(8)</div>
-        <div class="hotel-stop-name">Jiuzhaigou / Zhangzha Town</div>
-        <div class="hotel-stop-nights">4 nights · Sep 22–25</div>
-      </div>
-      <div class="hotel-area"><strong>Suggested area:</strong> Zhangzha Town (沟口 / Goukou) — the cluster of hotels at the Jiuzhaigou park entrance, ~10min walk from the gate. Limited high-end options. Look for hotels with heating + reliable hot water (autumn nights get cold at 2,000m). Avoid hotels in Songpan or Chuanzhusi — too far from the daily park visits.</div>
-    </div>
-
-  </div>
-</section>
-
-<section id="notes">
-  <div class="container">
-    <div class="section-label">Field notes</div>
-    <h2>Things to remember.</h2>
-    <p class="section-intro">A few logistics worth nailing down well before September.</p>
-
-    <div class="notes-grid">
-      <div class="note-card">
-        <div class="note-title">Mind the altitude</div>
-        <div class="note-body">Jiuzhaigou park is ~2,000m. Huanglong's upper viewpoints reach 3,900m — that's where altitude sickness hits some people. Take the cable car up, walk down. Drink water aggressively. Pack mild altitude medication (acetazolamide) as a precaution. Don't drink alcohol the night before Huanglong day.</div>
-      </div>
-
-      <div class="note-card">
-        <div class="note-title">You're well clear of Golden Week</div>
-        <div class="note-body">National Day Golden Week starts Oct 1. Your trip ends Sep 27, with 4 days of buffer — no overlap with the chaos. But booking pressure for trains and hotels builds steadily through September, so finalize everything by mid-July.</div>
-      </div>
-
-      <div class="note-card">
-        <div class="note-title">Group can extend at the end</div>
-        <div class="note-body">Your redeye out of Chengdu lands Sunday afternoon — full day to recover, back at work Monday. The rest of the group can either fly home with you, or book a separate return from Shanghai/Beijing with extra days to wind down. Easier to manage when international tickets are booked individually rather than as a group fare.</div>
-      </div>
-    </div>
+    <p class="weather-packing"><strong>Packing:</strong> Base kit of light layers + comfortable shoes. One warm layer (light fleece or puffy) for Beijing/Xi'an evenings and misty Zhangjiajie/Xijiang mornings. <strong>Pack a packable down for Huanglong morning</strong> — non-negotiable, the upper viewpoints sit at 3,500–3,900m and can be near freezing at dawn. ~15 wet days expected across the trip; compact umbrella + breathable shoes beats waterproof boots.</p>
   </div>
 </section>
 
 <footer>
   <div class="container footer-inner">
-    <span>China Itinerary · v26 · Xijiang two-night</span>
+    <span>China Itinerary · v27 · restructure + weather</span>
     <span>Drafted April 2026</span>
   </div>
 </footer>
@@ -1926,11 +1848,11 @@
     shanghai:   { name: "Shanghai",   coords: [31.2304, 121.4737], desc: "Days 1–4 · French Concession, Bund, Yu Garden, Suzhou half-day." },
     beijing:    { name: "Beijing",    coords: [39.9042, 116.4074], desc: "Days 5–7 · Forbidden City, Temple of Heaven, Great Wall at Mutianyu." },
     xian:       { name: "Xi'an",      coords: [34.2658, 108.9541], desc: "Days 8–9 · City wall sunset bike ride, Muslim Quarter food, Terracotta Army." },
-    chongqing:  { name: "Chongqing",  coords: [29.5657, 106.5512], desc: "Day 10 · Overnight stopover. Hongya Cave at night, hotpot, Yangtze cable car." },
+    chongqing:  { name: "Chongqing",  coords: [29.5657, 106.5512], desc: "Days 10–11 · Two nights — afternoon arrival, Hongya Cave at night, full Chongqing day, hotpot, Yangtze cable car. Optional Wulong Karst day trip." },
     zhangjiajie:{ name: "Zhangjiajie",coords: [29.1170, 110.4790], desc: "Days 11–13 · Avatar Mountains, Tianmen Mountain (Heaven's Gate)." },
-    kaili:      { name: "Xijiang Miao Village", coords: [26.4910, 108.1732], desc: "Days 14–15 · Largest Miao settlement in the world, two thousand years old. Two nights at a viewing-platform homestay inside the scenic area." },
-    chengdu:    { name: "Chengdu",    coords: [30.5728, 104.0668], desc: "Days 16–17 &amp; 22 · Pandas, People's Park tea house, Sichuan opera. Redeye home from Tianfu Airport.", isEnd: true },
-    jiuzhaigou: { name: "Jiuzhaigou + Huanglong", coords: [33.2600, 103.9186], desc: "Days 18–21 · Two Jiuzhaigou park days + Huanglong calcite terraces day trip." }
+    kaili:      { name: "Xijiang Miao Village", coords: [26.4910, 108.1732], desc: "Days 15–16 · Largest Miao settlement in the world, two thousand years old. Two nights at a viewing-platform homestay inside the scenic area." },
+    chengdu:    { name: "Chengdu",    coords: [30.5728, 104.0668], desc: "Days 17–18 &amp; 22 · Pandas, People's Park tea house, Sichuan opera. Redeye home from Tianfu Airport.", isEnd: true },
+    jiuzhaigou: { name: "Jiuzhaigou + Huanglong", coords: [33.2600, 103.9186], desc: "Days 19–21 · Single-day Jiuzhaigou highlights run (both branches) + Huanglong calcite terraces day trip." }
   };
 
   // The route sequence (stop keys in visit order; chengdu appears twice — outbound + return)
@@ -1939,7 +1861,7 @@
   // First-visit day number for each stop (for map → itinerary jumps)
   const locationDays = {
     shanghai: 1, beijing: 5, xian: 8, chongqing: 10,
-    zhangjiajie: 11, kaili: 14, chengdu: 16, jiuzhaigou: 18
+    zhangjiajie: 12, kaili: 15, chengdu: 17, jiuzhaigou: 19
   };
 
   const INK = '#1a1a1a';
