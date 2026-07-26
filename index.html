@@ -634,9 +634,9 @@
     font-weight: 500;
   }
 
-  /* HOTELS */
-  /* WEATHER */
-  .weather-table {
+  /* WEATHER + TRAIN BOOKINGS (shared table styles) */
+  .weather-table,
+  .train-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 13px;
@@ -644,14 +644,17 @@
   }
 
   .weather-table th,
-  .weather-table td {
+  .weather-table td,
+  .train-table th,
+  .train-table td {
     text-align: left;
     padding: 10px 12px;
     border-bottom: 1px solid var(--rule);
     vertical-align: top;
   }
 
-  .weather-table th {
+  .weather-table th,
+  .train-table th {
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.06em;
@@ -660,15 +663,22 @@
     border-bottom: 2px solid var(--ink);
   }
 
-  .weather-table td:first-child {
+  .weather-table td:first-child,
+  .train-table td:first-child {
     font-weight: 500;
     white-space: nowrap;
   }
 
-  .weather-table td:nth-child(2) {
+  .weather-table td:nth-child(2),
+  .train-table td:nth-child(2) {
     white-space: nowrap;
     color: var(--accent);
     font-feature-settings: 'tnum';
+  }
+
+  .train-table td:nth-child(3) {
+    font-feature-settings: 'tnum';
+    color: var(--ink-soft);
   }
 
   .weather-packing {
@@ -683,6 +693,25 @@
   .weather-packing strong {
     color: var(--ink);
     font-weight: 600;
+  }
+
+  .train-tip {
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0 0 14px 0;
+    color: var(--ink-soft);
+  }
+
+  .train-tip:last-child { margin-bottom: 0; }
+
+  .train-tip strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .train-tip em {
+    color: var(--accent);
+    font-style: normal;
   }
 
   /* FOOTER */
@@ -1772,6 +1801,47 @@
   </div>
 </section>
 
+<section id="trains">
+  <div class="container">
+    <div class="section-label">Train bookings</div>
+    <h2>Nine trains, one 15-day window.</h2>
+    <p class="section-intro">China Railway opens tickets exactly 15 days before departure — no earlier way to book officially. Popular routes fill fast, and Kaili → Chengdu only has 11 daily trains, so it can go too. Set reminders for each date below.</p>
+
+    <table class="train-table">
+      <thead>
+        <tr>
+          <th>Train</th>
+          <th>Travel date</th>
+          <th>Booking opens</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Shanghai → Suzhou (day trip)</td><td>Tue Sep 8</td><td>Tue Aug 25</td></tr>
+        <tr><td>Shanghai → Beijing</td><td>Wed Sep 9</td><td>Wed Aug 26</td></tr>
+        <tr><td>Beijing → Xi'an</td><td>Sat Sep 12</td><td>Sat Aug 29</td></tr>
+        <tr><td>Xi'an → Chongqing</td><td>Mon Sep 14</td><td>Mon Aug 31</td></tr>
+        <tr><td>Chongqing → Zhangjiajie</td><td>Wed Sep 16</td><td>Wed Sep 2</td></tr>
+        <tr><td>Zhangjiajie → Huaihua → Kaili</td><td>Sat Sep 19</td><td>Sat Sep 5</td></tr>
+        <tr><td>Kaili → Chengdu</td><td>Mon Sep 21</td><td>Mon Sep 7</td></tr>
+        <tr><td>Chengdu → Jiuzhaigou</td><td>Wed Sep 23</td><td>Wed Sep 9</td></tr>
+        <tr><td>Jiuzhaigou → Chengdu</td><td>Sat Sep 26</td><td>Sat Sep 12</td></tr>
+      </tbody>
+    </table>
+
+    <p class="train-tip"><strong>Platform.</strong> <em>Trip.com's</em> pre-reservation feature (~$2/ticket surcharge) auto-books when the 15-day window opens — worth it vs. someone waking up at 8am Beijing time every 2–3 days from Aug 25 to Sep 12. The free official <em>12306</em> English app works too, but register early since foreign-passport identity verification can queue for 3–5 days.</p>
+
+    <p class="train-tip"><strong>Group of 6.</strong> One person adds all six passports as "passengers" in a single account (12306 allows up to 15 passenger profiles per account) and books all 6 tickets in one transaction per train. This is how you get adjacent seats — individual bookings almost always split you across cars.</p>
+
+    <p class="train-tip"><strong>Passport names.</strong> Must match the passport photo-page exactly, including name-order and any middle names. Wrong spelling = refund + rebook + fees.</p>
+
+    <p class="train-tip"><strong>Seat class.</strong> Second class is fine for every leg — 3+2 rows, tray tables, power outlets. Consider first class (2+2 rows, ~60% more expensive) for the two longest: <em>Shanghai → Beijing (4.5h)</em> and <em>Xi'an → Chongqing (5.5h)</em>.</p>
+
+    <p class="train-tip"><strong>Right station.</strong> Cities have multiple stations — book to the correct one. Shanghai <em>Hongqiao</em> · Beijing <em>South</em> arriving from Shanghai, Beijing <em>West</em> departing for Xi'an · Xi'an <em>North</em> · Chongqing <em>East</em> (both directions) · Zhangjiajie <em>West</em> · Kaili <em>South</em> · Chengdu <em>East</em> · <em>Huanglongjiuzhai</em> (not "Jiuzhaigou") for the alpine finale.</p>
+
+    <p class="train-tip"><strong>At the station.</strong> Arrive 45–60min early. Passport is your ticket — tap it at the orange gates entering and exiting. No paper needed. <em>Boarding closes 5 minutes BEFORE departure</em>, not after. Long legs have trolley service but food is basic; buy snacks on the concourse.</p>
+  </div>
+</section>
+
 <section id="weather">
   <div class="container">
     <div class="section-label">Weather</div>
@@ -1836,7 +1906,7 @@
 
 <footer>
   <div class="container footer-inner">
-    <span>China Itinerary · v27 · restructure + weather</span>
+    <span>China Itinerary · v28 · train bookings</span>
     <span>Drafted April 2026</span>
   </div>
 </footer>
